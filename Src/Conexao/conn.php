@@ -1,8 +1,8 @@
 <?php
 
 //Part for connect Data base 
-$host ="";
-$database="";
-$user="";
-$pass="";
+$host = "";
+$database= "";
+$user= "";
+$pass= "";
 ?>
