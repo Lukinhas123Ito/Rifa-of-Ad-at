@@ -14,7 +14,7 @@ $(document).ready(function (){
 
      //Now, include  a new page within the body of my modal
 
-     $('.modal-body').load('Src/tipo/V/form-type.html')
+     $('.modal-body').load('Src/type/V/form-type.html')
 
 
      $('.save').attr('data-operation', 'insert')
