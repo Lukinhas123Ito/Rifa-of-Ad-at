@@ -10,20 +10,20 @@ $('.save').click(function(e){
 
     $.ajax({
         type: 'POST',
-        dataType:"json",
+        dataType:"JSON",
         assync:true,
         data:dados,
         url:'Src/type/M/save.php',
         success:function(dados){
-
             Swal.fire({
-                title : 'Deu certo',
+                title: 'Cadastro concluido',
                 text: dados.messagem,
                 icon: dados.tipo,
                 confirmButtonText: 'OK'
             })
 
             $('#modal-type').modal('hide')
+            
         }
     })
 })
