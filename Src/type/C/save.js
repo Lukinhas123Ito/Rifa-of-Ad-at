@@ -16,9 +16,9 @@ $('.save').click(function(e){
         success:function(dados){
 
             Swal.fire({
-                title : 'Systema',
-                text: dados.message,
-                icon:tipo,
+                title : 'PAPAPAPPAPAP',
+                text: dados.Message,
+                icon: dados.tipo,
                 confirmButtonText: 'OK'
             })
 

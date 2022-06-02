@@ -19,9 +19,9 @@ if(empty($req['name'])){
     $op = isset($req['operacao']) ? $req['operacao'] : '';
 
     
-    if($op == 'insert'){
+    if($op == "insert"){
         try{
-            $stmt = $pdo('INSERT INTO TIPO (NOME) VALUES (:a)');
+            $stmt = $pdo('INSERT INTO TIPO (NOME) VALUES(:a)');
             $stmt -> execute(array(
                 ':a' => utf8_decode($req['name'])
             ));
@@ -37,7 +37,8 @@ if(empty($req['name'])){
     else{
 
         try{
-            $stmt = $pdo('UPDATE TIPO SET (NOME) VALUES (:a) WHERE ID = :id');
+            $stmt = $pdo->prepare('UPDATE TIPO SET (NOME) VALUES (:a) WHERE ID = :id');
+
             $stmt -> execute(array(
                 ':id' => $id,
                 ':a' => utf8_decode($req['name']),
@@ -45,7 +46,7 @@ if(empty($req['name'])){
             ));
             $data = array(
                 'tipo' => 'Winner',
-                'Message'=>'Deu certo'
+                'Message'=>'We are the champions, my friends'
              );
         }catch(PDOException $e){
             $data = array(
