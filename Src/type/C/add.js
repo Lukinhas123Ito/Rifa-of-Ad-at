@@ -10,7 +10,7 @@ $(document).ready(function (){
      $('.modal-body').empty()
 
      //include news text in the header of my modaln page
-     $('.modal-title').append('Arroz com carne')
+     $('.modal-title').append('Cadastrar tipo de vendedor')
 
      //Now, include  a new page within the body of my modal
 
