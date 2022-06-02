@@ -16,7 +16,7 @@ $(document).ready(function (){
 
      $('.modal-body').load('Src/type/V/form-type.html')
 
-
+     //THis part add new atributo 
      $('.save').attr('data-operation', 'insert')
 
      //Show the modal body
