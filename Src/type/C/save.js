@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 $('.save').click(function(e){
+    
     e.preventDefault()
 
     let dados = $('#form-type').serialize()
@@ -16,8 +17,8 @@ $('.save').click(function(e){
         success:function(dados){
 
             Swal.fire({
-                title : 'PAPAPAPPAPAP',
-                text: dados.Message,
+                title : 'Deu certo',
+                text: dados.messagem,
                 icon: dados.tipo,
                 confirmButtonText: 'OK'
             })

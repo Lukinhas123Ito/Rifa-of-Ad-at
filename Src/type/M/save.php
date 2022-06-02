@@ -8,7 +8,7 @@ if(empty($req['name'])){
 
     $data = array(
         'tipo' => 'Error',
-        'Message'=>'Algo de errado não está certo'   
+        'messagem'=>'Algo de errado não está certo'   
      );
 
 }else{
@@ -28,7 +28,7 @@ if(empty($req['name'])){
         }catch(PDOException $e){
             $data = array(
                 'tipo' => 'Error',
-                'Message'=>'Algo de errado não está certo'.$e 
+                'messagem'=>'Algo de errado não está certo'.$e 
              );
         }
     }
@@ -46,12 +46,12 @@ if(empty($req['name'])){
             ));
             $data = array(
                 'tipo' => 'Winner',
-                'Message'=>'We are the champions, my friends'
+                'messagem'=>'We are the champions, my friends'
              );
         }catch(PDOException $e){
             $data = array(
                 'tipo' => 'Error',
-                'Message'=>'Algo de errado não está certo'.$e 
+                'messagem'=>'Algo de errado não está certo'.$e 
              );
         }
 
