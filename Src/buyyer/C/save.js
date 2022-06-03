@@ -16,8 +16,16 @@ $('.save').click(function(e){
         url:'Src/type/M/save.php',
         success:function(dados){
             
-            $('#pes').append(`<p>${dados.messagem}</p>
-            `)
+            Swal.fire({
+               
+                    title: 'Cadastro concluido',
+                    text: dados.messagem,
+                    icon: dados.tipo,
+                    confirmButtonText: 'OK'
+                
+            })
+
+            $('#modal-type').modal('hide')
             
         }
     })

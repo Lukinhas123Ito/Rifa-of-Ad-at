@@ -4,11 +4,11 @@ include('../../Conexao/conn.php');
 $req = $_REQUEST;
 
 //if the variable be null
-if(empty($req['name'])){
+if(empty($req['name']) || empty($req['cell']) ){
 
     $data = array(
         "tipo" => 'Error',
-        "messagem" =>'Algo de errado não está certo'   
+        "messagem" =>'Você esqueceu de preencher um campo'   
      );
 
 }else{
@@ -21,9 +21,10 @@ if(empty($req['name'])){
     
     if($op == "insert"){
         try{
-            $stmt = $pdo->prepare('INSERT INTO TIPO (NOME) VALUES(:a)');
+            $stmt = $pdo->prepare('INSERT INTO COMPRADOR(NOME, CELULAR) VALUES (:a,:b)');
             $stmt -> execute(array(
-                ':a' => utf8_decode($req['name'])
+                ':a' => utf8_decode($req['name']),
+                ':b' => utf8_decode($req['cell'])
             ));
 
             $data = array(
@@ -43,11 +44,12 @@ if(empty($req['name'])){
     else{
 
         try{
-            $stmt = $pdo->prepare('UPDATE TIPO SET (NOME) VALUES (:a) WHERE ID = :id');
+            $stmt = $pdo->prepare('UPDATE COMPRADOR SET (NOME, CELULAR) VALUES (:a,:b) WHERE ID = :id');
 
             $stmt -> execute(array(
                 ':id' => $id,
                 ':a' => utf8_decode($req['name']),
+                ':b' => utf8_decode($req['cell'])
 
             ));
             $data = array(
