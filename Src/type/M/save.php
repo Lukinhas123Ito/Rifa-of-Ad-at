@@ -8,7 +8,7 @@ if(empty($req['name'])){
 
     $data = array(
         "type" => 'Error',
-        "message" =>'Algo de errado não está certo'   
+        "message" =>'Preencha um campo certo aí'   
      );
 
 }else{
