@@ -21,7 +21,7 @@ $('.save').click(function(e){
                 icon: dados.type,
                 confirmButtonText: 'Blz'
             })
-            $('#modal-tipo').modal('hide')
+            $('#modal-tp').modal('hide')
         }
     })
 })

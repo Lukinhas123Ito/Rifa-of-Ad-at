@@ -20,7 +20,7 @@ $(document).ready(function (){
      $('.save').attr('data-operation', 'insert')
 
      //Show the modal body
-     $('#modal-type').modal('show')
+     $('#modal-tp').modal('show')
 
  })
 })
