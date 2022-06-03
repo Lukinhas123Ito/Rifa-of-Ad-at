@@ -16,7 +16,7 @@ if(empty($req['name'])){
 //it's ok 
 
     $id = isset($req['id']) ? $req['id'] : '';
-    $op = isset($req['operacao']) ? $req['operacao'] : '';
+    $op = isset($req['op']) ? $req['op'] : '';
 
     
     if($op == "insert"){

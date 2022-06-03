@@ -6,7 +6,7 @@ $('.save').click(function(e){
 
     let dados = $('#form-type').serialize()
 
-    dados += `&operacao=${$('.save').attr('data-operation')}`
+    dados += `&op=${$('.save').attr('data-operation')}`
 
     $.ajax({
         type: 'POST',
