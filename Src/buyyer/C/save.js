@@ -13,7 +13,7 @@ $('.save').click(function(e){
         dataType:"JSON",
         assync:true,
         data:dados,
-        url:'Src/type/M/save.php',
+        url:'Src/buyyer/M/save.php',
         success:function(dados){
             
             Swal.fire({
