@@ -7,8 +7,8 @@ $req = $_REQUEST;
 if(empty($req['name'])){
 
     $data = array(
-        "tipo" => 'Error',
-        "messagem" =>'Algo de errado não está certo'   
+        "type" => 'Error',
+        "message" =>'Algo de errado não está certo'   
      );
 
 }else{
@@ -27,14 +27,14 @@ if(empty($req['name'])){
             ));
 
             $data = array(
-                "tipo" => 'Winner',
-                "messagem" =>'We are the champions, my friends'
+                "type" => 'Winner',
+                "message" =>'We are the champions, my friends'
              );
 
         }catch(PDOException $e){
             $data = array(
-                "tipo" => 'Error',
-                "messagem" =>'Algo de errado não está certo'.$e 
+                "type" => 'Error',
+                "message" =>'Algo de errado não está certo'.$e 
              );
         }
     }
@@ -51,13 +51,13 @@ if(empty($req['name'])){
 
             ));
             $data = array(
-                "tipo" => 'Winner',
-                "messagem" =>'We are the champions, my friends'
+                "type" => 'Winner',
+                "message" =>'We are the champions, my friends'
              );
         }catch(PDOException $e){
             $data = array(
-                "tipo" => 'Error',
-                "messagem" =>'Algo de errado não está certo'.$e 
+                "type" => 'Error',
+                "message" =>'Algo de errado não está certo'.$e 
              );
         }
 

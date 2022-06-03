@@ -14,11 +14,14 @@ $('.save').click(function(e){
         assync:true,
         data:dados,
         url:'Src/type/M/save.php',
-        success:function(dados){
-            
-            $('#pes').append(`<p>${dados.messagem}</p>
-            `)
-            
+        success: function(dados) {
+            Swal.fire({
+                title: 'Sysrifa',
+                text: dados.message,
+                icon: dados.type,
+                confirmButtonText: 'Blz'
+            })
+            $('#modal-tipo').modal('hide')
         }
     })
 })
